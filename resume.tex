@@ -1,0 +1,136 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Dmitry Zamkov}}\\
+	Verona, WI $\cdot$ dmitry94@gmail.com $\cdot$ 608 977 2438 $\cdot$ dzamkov.github.io\\
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{University of Illinois at Urbana-Champaign}\hfill Champaign, IL\\
+BS in Computer Science \textit{GPA: 3.98} \hfill Aug 2013 - May 2016\\
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{Epic Systems} \hfill Verona, WI\\
+\textit{Software Developer} \hfill July 2016 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Key developer in a multi-year project to adapt software for international customers. Involved in all stages of the development lifecycle from requirement gathering to production release
+	\item Created graphical testing tools (C\#, WinForms) to assist with QA on newly developed infrastructure. Installation of these tools has become a standard onboarding item for new members on the project
+	\item Proposed, designed and developed template engine project (C\#) to modernize XML/JSON data exchange infrastructure, enabling several future integration projects which rely on data exchange in custom formats
+	\item Expanded scope of automated testing, directly preventing at least one critical issue from making it to production
+	\item Discovered twice as many issues from code review as compared to the company average
+	\item Collaborated with support staff to investigate and resolve issues in production
+	\item Following UX design principles, developed a web application (ASP.net, TypeScript) for querying and displaying patient data
+\end{itemize}
+\textbf{Intentional Software} \hfill Bellevue, WA\\
+\textit{Software Developer Intern} \hfill May 2015 - Aug 2015\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Worked on project to migrate graphics backend from DirectDraw to OpenGL, successfully completing my component during the 3-month internship
+	\item Implemented geometry processing algorithms in C++ and C\#
+\end{itemize}
+\textbf{Venuity Healthcare} \hfill Newport News, VA\\
+\textit{IT Intern} \hfill Summers 2009 - 2014\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Wrote Batch/VB scripts to automate business processes
+	\item Independently developed in-house software for employee time tracking and document management (C\#, SQL), saving approximately \$7000/yr in software licensing costs
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Languages: & \textit{(Proficient)} C\#, C++, JavaScript, SQL, \textit{(Familiar)} Python, Haskell, F\# \\
+	Web Development: & NodeJS, Sass, TypeScript, WebGL\\
+	Graphics: & OpenGL, GLSL, UX Design, Image processing \\
+	Tools: &  Continuous Integration, Linux, Windows, Git, SVN, Docker
+	
+\end{tabular}
+\vspace{2mm}
+
+\header{Projects}
+{\textbf{RuleSwaps}} \\
+Fully functional multiplayer card game, built using JavaScript, NodeJS and Sass. Hosted on AWS VPS with automated build and deployment from Git repository. \\
+\textbf{Website:} ruleswaps.io \\
+\textbf{Code:} github.com/dzamkov/RuleSwaps
+\vspace*{2mm}
+
+
+
+\ 
+\end{document}
